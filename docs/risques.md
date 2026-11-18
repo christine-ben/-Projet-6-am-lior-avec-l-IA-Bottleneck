@@ -1,10 +1,12 @@
-# Registre des risques
+# Les risques de mon projet
 
-| Risque              | Ce qui peut arriver | Ce que je fais pour l'éviter |
-| ------------------- | ------------------- | ---------------------------- |
-| Fuite de données    |                     |                              |
-| Biais               |                     |                              |
-| Erreur de l'IA      |                     |                              |
-| Résultats instables |                     |                              |
-| Temps de calcul     |                     |                              |
-| Retard              |                     |                              |
+| Risque                      | Ce qui peut se passer                                                           | Chance que ça arrive     | Gravité | Ce que je fais pour l'éviter                                                                           |
+| --------------------------- | ------------------------------------------------------------------------------- | ------------------------ | ------- | ------------------------------------------------------------------------------------------------------ |
+| Fuite de données            | J'envoie les fichiers de l'entreprise à une IA                                  | Faible                   | Grave   | J'envoie seulement le nom des colonnes, jamais les fichiers                                            |
+| Erreur de l'IA              | Le code donné par l'IA est faux ou incomplet                                    | Moyenne                  | Moyenne | Je teste chaque code et je vérifie les résultats. Ça m'est arrivé : le code de ChatGPT était incomplet |
+| Faux suspects               | Des vins chers mais normaux sont signalés comme des erreurs                     | Forte                    | Moyenne | Je regarde la marge et le type de vin avant de conclure. Je ne supprime rien                           |
+| Petits groupes              | Certains types de vin ont très peu de produits : les résultats sont peu fiables | Moyenne                  | Moyenne | Je l'écris dans les limites de mon projet                                                              |
+| Résultats qui changent      | Isolation Forest donne un résultat différent à chaque lancement                 | Forte si je ne fais rien | Faible  | Je fixe random_state=42 pour avoir toujours le même résultat                                           |
+| Données de mauvaise qualité | Ventes négatives, valeurs manquantes                                            | Moyenne                  | Moyenne | Je les repère et je les note dans les limites                                                          |
+| Retard                      | Je ne finis pas à temps                                                         | Moyenne                  | Grave   | Je fais d'abord ce qui est obligatoire, puis les bonus                                                 |
+| Perte de mon travail        | Mon ordinateur plante ou j'efface un fichier                                    | Faible                   | Grave   | J'enregistre sur GitHub après chaque étape                                                             |
