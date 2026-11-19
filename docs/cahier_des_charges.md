@@ -41,20 +41,21 @@ Sur les données :
 
 Sur les résultats :
 
-- les 2 méthodes (IQR et Isolation Forest) sont comparées dans un tableau ;
-- chaque produit signalé a une raison écrite (par exemple "marge négative" ou "vin haut de gamme").
+- les 2 méthodes (IQR et Isolation Forest) sont comparées dans un tableau, avec 3 réglages (2 %, 5 %, 8 %) ;
+- chaque produit à vérifier a une raison écrite dans la colonne "raison" (par exemple "marge négative" ou "vin premium probable").
 
 Sur le fonctionnement :
 
 - le notebook marche du début à la fin sans erreur ;
-- il donne les mêmes résultats à chaque fois.
+- il donne les mêmes résultats à chaque fois (random_state=42).
 
 ## 6. Ma liste de vérification finale
 
-- [ ] Le notebook se lance avec "Run All" sans erreur
-- [ ] Le tableau qui compare les 2 méthodes est présent
-- [ ] La marge négative est bien repérée
-- [ ] Aucun produit n'est supprimé : les produits suspects sont signalés dans la colonne "a_verifier"
+- [x] Le notebook se lance avec "Run All" sans erreur
+- [x] Le tableau qui compare les 2 méthodes est présent
+- [x] La marge négative est bien repérée
+- [x] Chaque produit à vérifier a une raison dans la colonne "raison"
+- [x] Aucun produit n'est supprimé : les produits suspects sont signalés dans la colonne "a_verifier" (61 produits), avec leur raison dans la colonne "raison"
 - [ ] Chaque graphique a un titre, des noms d'axes et une phrase d'explication
 - [ ] Aucune donnée n'a été envoyée à une IA
 
@@ -68,7 +69,6 @@ Pour que l'équipe sache utiliser mon travail, j'ai pensé à 2 idées :
 | B : une fiche d'une page        | J'explique comment lire la liste des prix à vérifier | On peut la relire quand on veut | Pas de questions en direct                         |
 
 Mon choix : la fiche (B), car c'est le plus simple et l'équipe peut la garder.
-
 Ce que la fiche doit faire comprendre :
 
 1. Un prix signalé n'est pas forcément une erreur.

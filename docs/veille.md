@@ -22,17 +22,18 @@ pour repérer plus vite les vrais prix suspects.
 
 ## 3. Mon tableau de comparaison
 
-| Critère                       | A : IQR (actuel)                                                 | B : IQR par groupe                                   | D : Isolation Forest                                     |
-| ----------------------------- | ---------------------------------------------------------------- | ---------------------------------------------------- | -------------------------------------------------------- |
-| Comment ça marche             | Un prix est anormal s'il sort des bornes calculées avec Q1 et Q3 | Pareil, mais à l'intérieur de chaque type de vin     | L'algorithme cherche les produits qui ont un profil rare |
-| Colonnes utilisées            | Le prix seulement                                                | Le prix + le type de produit                         | Prix, prix d'achat, marge, stock, ventes, type           |
-| Résultat sur mes données      | [à compléter] outliers                                           | Pas testée                                           | [à compléter] outliers (réglage 5 %)                     |
-| Trouve la marge négative ?    | Non, je l'ai trouvée à la main                                   | Pas testée                                           | [à compléter : oui / non]                                |
-| Facile à expliquer            | Très facile                                                      | Facile                                               | Plus difficile                                           |
-| Temps de calcul               | Immédiat                                                         | Immédiat                                             | Quelques secondes                                        |
-| Même résultat à chaque fois ? | Oui                                                              | Oui                                                  | Oui, grâce à random_state=42                             |
-| Limites                       | Signale les vins chers même s'ils sont normaux                   | Les petits groupes donnent des résultats peu fiables | Il ne dit pas pourquoi un produit est bizarre            |
-| Données personnelles (RGPD)   | Aucune                                                           | Aucune                                               | Aucune                                                   |
+| Critère                       | A : IQR (actuel)                                                              | B : IQR par groupe                                   | D : Isolation Forest                                             |
+| ----------------------------- | ----------------------------------------------------------------------------- | ---------------------------------------------------- | ---------------------------------------------------------------- |
+| Comment ça marche             | Un prix est anormal s'il sort des bornes calculées avec Q1 et Q3              | Pareil, mais à l'intérieur de chaque type de vin     | L'algorithme cherche les produits qui ont un profil rare         |
+| Colonnes utilisées            | Le prix seulement                                                             | Le prix + le type de produit                         | Prix, prix d'achat, marge, stock, ventes, type                   |
+| Résultat sur mes données      | 36 outliers                                                                   | Pas testée                                           | 17 (réglage 2 %), 42 (5 %), 66 (8 %)                             |
+| Trouve la marge négative ?    | Le produit est dans la liste, mais l'IQR ne dit pas que sa marge est négative | Pas testée                                           | Oui, avec les 3 réglages                                         |
+| Faux suspects                 | Beaucoup : 19 grands vins signalés seulement parce qu'ils sont chers          | Pas testée                                           | Moins sur les prix, mais il signale aussi des problèmes de stock |
+| Facile à expliquer            | Très facile                                                                   | Facile                                               | Plus difficile                                                   |
+| Temps de calcul               | Immédiat                                                                      | Immédiat                                             | Quelques secondes                                                |
+| Même résultat à chaque fois ? | Oui                                                                           | Oui                                                  | Oui, grâce à random_state=42                                     |
+| Limites                       | Signale les vins chers même s'ils sont normaux                                | Les petits groupes donnent des résultats peu fiables | Il ne dit pas pourquoi un produit est bizarre                    |
+| Données personnelles (RGPD)   | Aucune                                                                        | Aucune                                               | Aucune                                                           |
 
 ## 4. Mes sources
 
@@ -42,15 +43,15 @@ pour repérer plus vite les vrais prix suspects.
   https://static.marimo.app/static/outlier-detection-experiment-k3mi
 - Mes échanges avec ChatGPT et Claude : voir journal_IA.md
 
-## 5. Ce que j'ai appris pendant ma veille
+## 5. Ce que j'ai appris
 
-- Chaque méthode a sa propre idée de ce qui est "anormal". Elles ne trouvent donc pas les mêmes produits.
+- Chaque méthode a sa propre idée de ce qui est "anormal". Elles ne trouvent pas les mêmes produits : c'est aussi ce que dit l'article KDnuggets, et c'est ce que j'ai observé (17 produits en commun sur 36 et 42).
+- L'IQR repère les vins chers. Isolation Forest repère les profils incohérents (marge négative, ventes négatives, stock qui dort).
 - Il ne faut jamais supprimer un produit automatiquement : on le signale, puis on vérifie.
-- Une méthode simple (IQR) est plus facile à expliquer. Une méthode de machine learning voit plus de choses, mais demande plus de vérifications.
 
 ## 6. Ma décision
 
-[à compléter après le test, par exemple :]
 Je garde l'IQR, car il est simple à expliquer à l'équipe.
-J'ajoute Isolation Forest, car il regarde le prix d'achat et la marge en même temps et repère des produits que l'IQR ne voit pas.
-Je mets de côté l'option B pour une prochaine amélioration.
+J'ajoute Isolation Forest (réglage 5 %), car il trouve la marge négative avec tous les réglages et il évite de signaler des grands vins juste parce qu'ils sont chers.
+J'ajoute une colonne "raison" pour expliquer chaque alerte, car Isolation Forest ne le fait pas.
+Je garde l'option B (IQR par groupe) pour une prochaine amélioration.
