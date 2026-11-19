@@ -13,15 +13,16 @@ sans confondre les erreurs de prix avec les vins haut de gamme.
 
 ## Mes résultats
 
-[à compléter à la fin,:]
-
-- L'IQR trouve [X] prix anormaux, Isolation Forest en trouve [Y].
-- [Z] produits sont trouvés par les deux méthodes : ce sont les premiers à vérifier.
-- La marge négative [est / n'est pas] trouvée automatiquement par Isolation Forest.
+- L'IQR trouve 36 prix anormaux. Isolation Forest (réglage 5 %) trouve 42 produits au profil bizarre. 17 sont trouvés par les deux méthodes.
+- La marge négative (produit 6324 : vendu 92 €, acheté 99 €) est trouvée par Isolation Forest avec les 3 réglages testés.
+- 19 grands vins sont signalés seulement par l'IQR : leur marge est normale, ce sont des faux suspects.
+- Isolation Forest repère aussi des problèmes de stock (stock très élevé, aucune vente).
+- Le même vin apparaît sous 2 numéros (4594 et 6324) avec des ventes négatives : doublon possible à vérifier.
+- Au total, 61 produits sont à vérifier. Chacun a une raison écrite dans la colonne "raison". automatiquement par Isolation Forest.
 
 ## Les limites
 
-- Isolation Forest ne dit pas pourquoi un produit est suspect : il faut toujours vérifier.
+- Isolation Forest ne dit pas pourquoi un produit est suspect : j'ai ajouté des règles simples pour écrire une raison, mais leurs seuils sont des choix personnels.
 - J'ai peu d'informations sur chaque vin (pas de région, pas d'appellation).
 - Certaines données sont à corriger (ventes négatives).
 
