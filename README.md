@@ -26,7 +26,7 @@ sans confondre les erreurs de prix avec les vins haut de gamme.
 - J'ai peu d'informations sur chaque vin (pas de région, pas d'appellation).
 - Certaines données sont à corriger (ventes négatives).
 
-## Comment lancer le projet
+## Comment lancer le projetque je doit remplire dans le redame
 
 1. Installer Anaconda (Python).
 2. Ouvrir le dossier du projet dans VS Code.
@@ -43,7 +43,11 @@ sans confondre les erreurs de prix avec les vins haut de gamme.
 
 ## Comment j'ai organisé mon travail
 
-- Kanban et planning : [lien à ajouter à l'étape 3]
+## Comment j'ai organisé mon travail
+
+- Tableau Kanban (Trello) : [lien de tableau Trello] https://trello.com/invite/b/6afeb5078d4fc03b20eafa90/ATTIf8997ad9f5a1cc42a487858d06991f7dAA71F437/mission-1-bottleneck
+- Captures du Kanban : dossier docs/captures_kanban/
+- Liste des tâches, planning et points de contrôle : docs/organisation.md
 - Risques : docs/risques.md
 
 ## Ce que je ferais avec plus de temps
