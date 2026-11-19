@@ -39,7 +39,7 @@ Où j'en suis : 7 terminées, 3 en cours, 6 à faire.
 
 ## 3. Mon planning
 
-Début du projet : 17/11/2026. Date de rendu : [à compléter]
+Début du projet : 16/11/2026. Date de rendu : 18/12/2026
 
 | Semaine | Dates         | Lots   | Tâches        | Jalon (ce qui doit être fini)                             |
 | ------- | ------------- | ------ | ------------- | --------------------------------------------------------- |

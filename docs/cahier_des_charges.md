@@ -30,7 +30,7 @@ Je ne fais pas :
 - J'ai peu d'informations sur chaque vin (pas de région, pas d'appellation).
 - Pas de données personnelles dans les fichiers. Je n'envoie jamais les fichiers à une IA, seulement le nom des colonnes.
 - Mes outils : Python, VS Code, Jupyter, pandas, scikit-learn, GitHub.
-- Date de rendu : [à compléter]
+- Date de rendu :18/12/2026
 
 ## 5. Comment je sais que c'est réussi (mes indicateurs)
 
@@ -54,8 +54,8 @@ Sur le fonctionnement :
 - [x] Le notebook se lance avec "Run All" sans erreur
 - [x] Le tableau qui compare les 2 méthodes est présent
 - [x] La marge négative est bien repérée
-- [x] Chaque produit à vérifier a une raison dans la colonne "raison"
-- [x] Aucun produit n'est supprimé : les produits suspects sont signalés dans la colonne "a_verifier" (61 produits), avec leur raison dans la colonne "raison"
+- [ ] Chaque produit à vérifier a une raison dans la colonne "raison"
+- [ ] Aucun produit n'est supprimé : les produits suspects sont signalés dans la colonne "a_verifier" (61 produits), avec leur raison dans la colonne "raison"
 - [ ] Chaque graphique a un titre, des noms d'axes et une phrase d'explication
 - [ ] Aucune donnée n'a été envoyée à une IA
 
