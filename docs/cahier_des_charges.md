@@ -32,22 +32,29 @@ Je ne fais pas :
 - Mes outils : Python, VS Code, Jupyter, pandas, scikit-learn, GitHub.
 - Date de rendu :18/12/2026
 
-## 5. Comment je sais que c'est réussi (mes indicateurs)
+### 5. Comment je sais que c'est réussi (mes indicateurs)
 
-Sur les données :
+### Données
 
 - aucun doublon sur product_id ;
 - tous les prix sont des nombres positifs.
 
-Sur les résultats :
+### Modèle / résultats
 
 - les 2 méthodes (IQR et Isolation Forest) sont comparées dans un tableau, avec 3 réglages (2 %, 5 %, 8 %) ;
-- chaque produit à vérifier a une raison écrite dans la colonne "raison" (par exemple "marge négative" ou "vin premium probable").
+- chaque produit à vérifier a une raison écrite dans la colonne "raison" (par exemple "marge négative" ou "vin premium probable"). C'est mon critère d'interprétabilité : on comprend pourquoi un produit est signalé ;
+- la marge négative est bien repérée par les deux méthodes.
 
-Sur le fonctionnement :
+### Fonctionnement
 
 - le notebook marche du début à la fin sans erreur ;
 - il donne les mêmes résultats à chaque fois (random_state=42).
+
+### Ce que je ne mesure pas, et pourquoi
+
+- Je ne calcule pas de précision ni de rappel : je n'ai pas de liste de vraies erreurs pour comparer.
+- Je ne fais pas de mesures avancées (Jaccard, score d'anomalie, kappa). Mon projet est simple et je dois pouvoir expliquer chaque chiffre à l'équipe du caviste.
+- Piste pour plus tard : faire relire la liste par le caviste, ce qui permettrait de calculer une vraie précision.
 
 ## 6. Ma liste de vérification finale
 
