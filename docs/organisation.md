@@ -14,28 +14,28 @@
 ## 2. Ma liste de tâches (le backlog)
 
 Un backlog, c'est la liste de tout ce que je dois faire.
-Mise à jour : 19/11/2026
+Mise à jour : 23/11/2026
 
-| N°  | Ce que je dois faire                                | Temps  | À finir avant | C'est fini quand...                                               | Où j'en suis |
-| --- | --------------------------------------------------- | ------ | ------------- | ----------------------------------------------------------------- | ------------ |
-| T1  | Préparer mon projet (dossiers, VS Code, GitHub)     | 2 h    | –             | Mon projet est sur GitHub                                         | Terminé      |
-| T2  | Faire ma veille : chercher et comparer des méthodes | 4 h    | T1            | veille.md compare 2 méthodes ou plus, avec des liens et mon choix | Terminé      |
-| T3  | Écrire le cahier des charges                        | 2 h    | T2            | cahier_des_charges.md est rempli                                  | Terminé      |
-| T4  | Faire marcher mon notebook du projet 6              | 1 h    | T1            | "Run All" marche sans erreur                                      | Terminé      |
-| T5  | Noter les problèmes dans les données                | 2 h    | T4            | Les problèmes sont écrits dans le notebook                        | Terminé      |
-| T6  | Revoir mes résultats avec l'IQR                     | 1 h    | T5            | Le nombre d'outliers (36) est noté dans veille.md                 | Terminé      |
-| T7  | Tester des questions à l'IA et les noter            | 2 h    | T2            | journal_IA.md est rempli                                          | Terminé      |
-| T8  | Tester Isolation Forest                             | 3 h    | T6, T7        | Le code marche et le tableau s'affiche                            | En cours     |
-| T9  | Comparer 3 réglages (2 %, 5 %, 8 %) avec l'IQR      | 2 h    | T8            | Je commente le tableau dans "Ce que je retiens"                   | En cours     |
-| T10 | Écrire pourquoi chaque produit est signalé          | 2 h    | T9            | Chaque produit a une raison dans la colonne "raison"              | En cours     |
-| T11 | Vérifier ma liste de cases à cocher                 | 1 h    | T10           | Toutes les cases du cahier des charges sont cochées               | À faire      |
-| T12 | Montrer mon travail à mon mentor                    | 1 h    | T11           | J'ai noté ses remarques et je les ai corrigées                    | À faire      |
-| T13 | Nettoyer mon notebook                               | 2 h    | T9            | Il est clair, sans cellule vide, et "Run All" marche              | À faire      |
-| T14 | Créer le fichier requirements.txt                   | 30 min | T13           | Le fichier liste mes librairies                                   | À faire      |
-| T15 | Finir le README                                     | 2 h    | T13           | Il contient résultats, limites et comment lancer le projet        | À faire      |
-| T16 | Écrire la fiche pour l'équipe                       | 1 h    | T3, T10       | La fiche d'une page est dans docs/                                | À faire      |
+| N°  | Ce que je dois faire                                | Temps  | À finir avant | C'est fini quand...                                                          | Où j'en suis |
+| --- | --------------------------------------------------- | ------ | ------------- | ---------------------------------------------------------------------------- | ------------ |
+| T1  | Préparer mon projet (dossiers, VS Code, GitHub)     | 2 h    | –             | Mon projet est sur GitHub                                                    | Terminé      |
+| T2  | Faire ma veille : chercher et comparer des méthodes | 4 h    | T1            | veille.md compare 2 méthodes ou plus, avec des liens et mon choix            | Terminé      |
+| T3  | Écrire le cahier des charges                        | 2 h    | T2            | cahier_des_charges.md est rempli                                             | Terminé      |
+| T4  | Faire marcher mon notebook du projet 6              | 1 h    | T1            | "Run All" marche sans erreur                                                 | Terminé      |
+| T5  | Noter les problèmes dans les données                | 2 h    | T4            | Les problèmes sont écrits dans le notebook                                   | Terminé      |
+| T6  | Revoir mes résultats avec l'IQR                     | 1 h    | T5            | Le nombre d'outliers (36) est noté dans veille.md                            | Terminé      |
+| T7  | Tester des questions à l'IA et les noter            | 2 h    | T2            | journal_IA.md rempli (5 essais) avec liens et captures dans docs/captures_IA | Terminé      |
+| T8  | Tester Isolation Forest                             | 3 h    | T6, T7        | Le code marche et le tableau s'affiche                                       | Terminé      |
+| T9  | Comparer 3 réglages (2 %, 5 %, 8 %) avec l'IQR      | 2 h    | T8            | Je commente le tableau dans "Ce que je retiens"                              | En cours     |
+| T10 | Écrire pourquoi chaque produit est signalé          | 2 h    | T9            | Chaque produit a une raison dans la colonne "raison"                         | En cours     |
+| T11 | Vérifier ma liste de cases à cocher                 | 1 h    | T10           | Toutes les cases du cahier des charges sont cochées                          | À faire      |
+| T12 | Montrer mon travail à mon mentor                    | 1 h    | T11           | J'ai noté ses remarques et je les ai corrigées                               | À faire      |
+| T13 | Nettoyer mon notebook                               | 2 h    | T9            | Il est clair, sans cellule vide, et "Run All" marche                         | À faire      |
+| T14 | Créer le fichier requirements.txt                   | 30 min | T13           | Le fichier liste mes librairies                                              | À faire      |
+| T15 | Finir le README                                     | 2 h    | T13           | Il contient résultats, limites et comment lancer le projet                   | À faire      |
+| T16 | Écrire la fiche pour l'équipe                       | 1 h    | T3, T10       | La fiche d'une page est dans docs/                                           | À faire      |
 
-Où j'en suis : 7 terminées, 3 en cours, 6 à faire.
+Où j'en suis : 8 terminées, 2 en cours, 6 à faire.
 
 ## 3. Mon planning
 
@@ -65,7 +65,7 @@ Début du projet : 16/11/2026. Date de rendu : 18/12/2026
 ## 5. Mon tableau Kanban
 
 - Outil : Trello
-- Lien : [\[ lien de tableau Trello\]](https://trello.com/invite/b/6afeb5078d4fc03b20eafa90/ATTIf8997ad9f5a1cc42a487858d06991f7dAA71F437/mission-1-bottleneck)
+- Lien : [voir mon tableau Trello](https://trello.com/invite/b/6afeb5078d4fc03b20eafa90/ATTIf8997ad9f5a1cc42a487858d06991f7dAA71F437/mission-1-bottleneck)
 - Captures : dossier docs/captures_kanban/
 
 ## 6. Mes risques
