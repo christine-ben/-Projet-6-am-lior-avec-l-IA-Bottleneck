@@ -38,9 +38,10 @@ sans confondre les erreurs de prix avec les vins haut de gamme.
 
 1. Installer Anaconda (Python).
 2. Ouvrir le dossier du projet dans VS Code.
-3. Ouvrir notebooks/P6_Bottleneck_amelioration.ipynb.
-4. Choisir le kernel Python d'Anaconda (bouton "Select Kernel").
-5. Cliquer sur "Run All".
+3. Dans le terminal, taper : pip install -r requirements.txt
+4. Ouvrir notebooks/P6_Bottleneck_amelioration.ipynb.
+5. Choisir le kernel Python d'Anaconda (bouton "Select Kernel").
+6. Cliquer sur "Run All".
 
 ## Comment le projet est rangé
 
