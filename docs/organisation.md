@@ -26,16 +26,16 @@ Mise à jour : 23/11/2026
 | T6  | Revoir mes résultats avec l'IQR                     | 1 h    | T5            | Le nombre d'outliers (36) est noté dans veille.md                            | Terminé      |
 | T7  | Tester des questions à l'IA et les noter            | 2 h    | T2            | journal_IA.md rempli (5 essais) avec liens et captures dans docs/captures_IA | Terminé      |
 | T8  | Tester Isolation Forest                             | 3 h    | T6, T7        | Le code marche et le tableau s'affiche                                       | Terminé      |
-| T9  | Comparer 3 réglages (2 %, 5 %, 8 %) avec l'IQR      | 2 h    | T8            | Je commente le tableau dans "Ce que je retiens"                              | En cours     |
-| T10 | Écrire pourquoi chaque produit est signalé          | 2 h    | T9            | Chaque produit a une raison dans la colonne "raison"                         | En cours     |
-| T11 | Vérifier ma liste de cases à cocher                 | 1 h    | T10           | Toutes les cases du cahier des charges sont cochées                          | À faire      |
-| T12 | Montrer mon travail à mon mentor                    | 1 h    | T11           | J'ai noté ses remarques et je les ai corrigées                               | À faire      |
-| T13 | Nettoyer mon notebook                               | 2 h    | T9            | Il est clair, sans cellule vide, et "Run All" marche                         | À faire      |
-| T14 | Créer le fichier requirements.txt                   | 30 min | T13           | Le fichier liste mes librairies                                              | À faire      |
-| T15 | Finir le README                                     | 2 h    | T13           | Il contient résultats, limites et comment lancer le projet                   | À faire      |
-| T16 | Écrire la fiche pour l'équipe                       | 1 h    | T3, T10       | La fiche d'une page est dans docs/                                           | À faire      |
+| T9  | Comparer 3 réglages (2 %, 5 %, 8 %) avec l'IQR      | 2 h    | T8            | Je commente le tableau dans "Ce que je retiens"                              | Terminé      |
+| T10 | Écrire pourquoi chaque produit est signalé          | 2 h    | T9            | Chaque produit a une raison dans la colonne "raison"                         | Terminé      |
+| T11 | Vérifier ma liste de cases à cocher                 | 1 h    | T10           | Toutes les cases du cahier des charges sont cochées                          | Terminé      |
+| T12 | Montrer mon travail à mon mentor                    | 1 h    | T11           | J'ai noté ses remarques et je les ai corrigées                               | en cours     |
+| T13 | Nettoyer mon notebook                               | 2 h    | T9            | Il est clair, sans cellule vide, et "Run All" marche                         | Terminé      |
+| T14 | Créer le fichier requirements.txt                   | 30 min | T13           | Le fichier liste mes librairies                                              | Terminé      |
+| T15 | Finir le README                                     | 2 h    | T13           | Il contient résultats, limites et comment lancer le projet                   | Terminé      |
+| T16 | Écrire la fiche pour l'équipe                       | 1 h    | T3, T10       | La fiche d'une page est dans docs/                                           | Terminé      |
 
-Où j'en suis : 8 terminées, 2 en cours, 6 à faire.
+Où j'en suis : 15 terminées, 1 en cours, 0 à faire.
 
 ## 3. Mon planning
 
@@ -71,3 +71,10 @@ Début du projet : 16/11/2026. Date de rendu : 18/12/2026
 ## 6. Mes risques
 
 Voir docs/risques.md
+
+## 7. Remarques de mon mentor
+
+Date : [date de sa réponse]En attente de la réponse de mon mentor
+
+- Remarque : [ce qu'il a dit]
+- Ce que j'ai corrigé : []

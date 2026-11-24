@@ -80,3 +80,5 @@ Ce que la fiche doit faire comprendre :
 
 1. Un prix signalé n'est pas forcément une erreur.
 2. Avant de corriger un prix, il faut regarder la marge et le type de vin.
+
+La fiche est écrite : docs/fiche_equipe.md
