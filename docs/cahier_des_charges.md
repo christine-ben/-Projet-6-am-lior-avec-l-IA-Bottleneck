@@ -60,11 +60,11 @@ Je ne fais pas :
 
 - [x] Le notebook se lance avec "Run All" sans erreur
 - [x] Le tableau qui compare les 2 méthodes est présent
-- [x] La marge négative est bien repérée
-- [ ] Chaque produit à vérifier a une raison dans la colonne "raison"
-- [ ] Aucun produit n'est supprimé : les produits suspects sont signalés dans la colonne "a_verifier" (61 produits), avec leur raison dans la colonne "raison"
-- [ ] Chaque graphique a un titre, des noms d'axes et une phrase d'explication
-- [ ] Aucune donnée n'a été envoyée à une IA
+- [x] La marge négative est bien repérée (oui produit 6324)
+- [x] Chaque produit à vérifier a une raison dans la colonne "raison"
+- [x] Aucun produit n'est supprimé : les produits suspects sont signalés dans la colonne "a_verifier" (61 produits), avec leur raison dans la colonne "raison"
+- [x] Chaque graphique a un titre, des noms d'axes et une phrase d'explication
+- [x] Aucune donnée n'a été envoyée à une IA
 
 ## 7. Mon mini-plan de formation
 
