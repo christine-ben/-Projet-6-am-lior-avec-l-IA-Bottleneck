@@ -24,14 +24,6 @@ Je ne fais pas :
 - je n'analyse pas les clients ;
 - je n'analyse pas les boutiques physiques.
 
-## 4. Mes contraintes
-
-- Les données ont quelques problèmes : valeurs manquantes, ventes négatives, une marge négative.
-- J'ai peu d'informations sur chaque vin (pas de région, pas d'appellation).
-- Pas de données personnelles dans les fichiers. Je n'envoie jamais les fichiers à une IA, seulement le nom des colonnes.
-- Mes outils : Python, VS Code, Jupyter, pandas, scikit-learn, GitHub.
-- Date de rendu :18/12/2026
-
 ### 5. Comment je sais que c'est réussi (mes indicateurs)
 
 ### Données
@@ -82,3 +74,41 @@ Ce que la fiche doit faire comprendre :
 2. Avant de corriger un prix, il faut regarder la marge et le type de vin.
 
 La fiche est écrite : docs/fiche_equipe.md
+« La fiche respecte les règles d'accessibilité (voir docs/fiche_equipe.md). »
+
+## Objectifs et enjeux
+
+**Objectifs** : repérer vite les vrais problèmes de prix et donner une raison pour chaque produit signalé.
+
+**Enjeux** : ne pas corriger à tort un grand vin, ne pas laisser passer un produit vendu à perte, garder un catalogue fiable pour l'équipe.
+
+## Contexte changeant et contraintes interne / externe
+
+**Un contexte qui change** : le catalogue évolue (nouveaux produits, prix modifiés), les données ne sont pas parfaites et les outils d'IA changent vite.
+
+**Contraintes internes** : données imparfaites (cases vides, ventes négatives), peu d'informations par vin, temps limité.
+
+**Contraintes externes** : RGPD, date de rendu le 18/12/2026, équipe métier à convaincre.
+
+## Ressources et budget
+
+**Budget financier** : 0 € (outils gratuits ou déjà possédés : Anaconda, VS Code, GitHub, Trello).
+
+**Budget temps** : environ X heures au total, du 16/11/2026 au 18/12/2026.
+
+**Ressources** : mon ordinateur, Python 3.13, pandas, scikit-learn, GitHub, Trello.
+
+## Priorités du projet
+
+- **Obligatoire** : comparer l'IQR et Isolation Forest, écrire une raison pour chaque produit, avoir un notebook qui marche du début à la fin.
+- **Important** : la documentation et la fiche pour l'équipe.
+- **Plus tard** : IQR par type de vin, test de stabilité (relancer avec d'autres graines).
+
+## Livrables
+
+- Notebook amélioré : `notebooks/P6_Bottleneck_amelioration.ipynb`
+- Liste des 61 produits à vérifier, avec les colonnes `a_verifier` et `raison` (dans le notebook)
+- Documentation de la démarche (PDF)
+- Fiche pour l'équipe : `docs/fiche_equipe.md`
+- Journal des essais avec l'IA : `journal_IA.md` (captures dans `docs/captures_IA`)
+- `README.md` et `requirements.txt`

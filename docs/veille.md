@@ -24,27 +24,30 @@ pour repérer plus vite les vrais prix suspects.
 
 L'option C (régression) est écartée : voir la partie 2.
 
-| Critère                                 | A : IQR (actuel)                                                                       | B : IQR par groupe                                        | D : Isolation Forest                                                                   |
-| --------------------------------------- | -------------------------------------------------------------------------------------- | --------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| Comment ça marche                       | Un prix est anormal s'il sort des bornes calculées avec Q1 et Q3                       | Pareil, mais à l'intérieur de chaque type de vin          | L'algorithme cherche les produits qui ont un profil rare                               |
-| Colonnes utilisées                      | Le prix seulement                                                                      | Le prix + le type de produit                              | Prix, prix d'achat, marge, stock, ventes, type                                         |
-| Qualité (résultat sur mes données)      | 36 outliers                                                                            | Pas testée                                                | 17 (réglage 2 %), 42 (5 %), 66 (8 %) : nombre fixé par le réglage, pas une découverte  |
-| Trouve la marge négative ?              | Le produit est dans la liste, mais l'IQR ne dit pas que sa marge est négative          | Pas testée                                                | Oui, avec les 3 réglages                                                               |
-| Faux suspects                           | Beaucoup : 19 grands vins signalés seulement parce qu'ils sont chers                   | Pas testée                                                | Moins sur les prix, mais il signale aussi des problèmes de stock                       |
-| Facile à expliquer                      | Très facile                                                                            | Facile                                                    | Plus difficile                                                                         |
-| Temps de calcul                         | Immédiat                                                                               | Immédiat                                                  | Quelques secondes                                                                      |
-| Même résultat à chaque fois ?           | Oui                                                                                    | Oui                                                       | Oui, grâce à random_state=42                                                           |
-| Limites                                 | Signale les vins chers même s'ils sont normaux                                         | Les petits groupes donnent des résultats peu fiables      | Il ne dit pas pourquoi un produit est bizarre                                          |
-| Données personnelles (RGPD)             | Aucune                                                                                 | Aucune                                                    | Aucune                                                                                 |
-| Biais (ce qui peut fausser le résultat) | Regarde un seul prix : un vin cher est signalé même s'il est normal (19 faux suspects) | Dépend du type de vin ; peu fiable si le groupe est petit | Dépend des colonnes choisies et du réglage (17, 42 ou 66 produits selon 2 %, 5 %, 8 %) |
-| Facile à maintenir                      | Très facile : quelques lignes de code                                                  | Facile                                                    | Moyen : il faut la librairie scikit-learn et bien choisir le réglage                   |
+| Critère                                   | A : IQR (actuel)                                                                       | B : IQR par groupe                                        | D : Isolation Forest                                                                                    |
+| ----------------------------------------- | -------------------------------------------------------------------------------------- | --------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
+| Comment ça marche                         | Un prix est anormal s'il sort des bornes calculées avec Q1 et Q3                       | Pareil, mais à l'intérieur de chaque type de vin          | L'algorithme cherche les produits qui ont un profil rare                                                |
+| Colonnes utilisées                        | Le prix seulement                                                                      | Le prix + le type de produit                              | Prix, prix d'achat, marge, stock, ventes, type                                                          |
+| Qualité (résultat sur mes données)        | 36 outliers                                                                            | Pas testée                                                | 17 (réglage 2 %), 42 (5 %), 66 (8 %) : nombre fixé par le réglage, pas une découverte                   |
+| Trouve la marge négative ?                | Le produit est dans la liste, mais l'IQR ne dit pas que sa marge est négative          | Pas testée                                                | Oui, avec les 3 réglages                                                                                |
+| Faux suspects                             | Beaucoup : 19 grands vins signalés seulement parce qu'ils sont chers                   | Pas testée                                                | Moins sur les prix, mais il signale aussi des problèmes de stock                                        |
+| Facile à expliquer                        | Très facile                                                                            | Facile                                                    | Plus difficile                                                                                          |
+| Temps de calcul                           | Immédiat                                                                               | Immédiat                                                  | Quelques secondes                                                                                       |
+| Même résultat à chaque fois ?             | Oui                                                                                    | Oui                                                       | Oui, grâce à random_state=42                                                                            |
+| Limites                                   | Signale les vins chers même s'ils sont normaux                                         | Les petits groupes donnent des résultats peu fiables      | Il ne dit pas pourquoi un produit est bizarre                                                           |
+| Données personnelles (RGPD)               | Aucune                                                                                 | Aucune                                                    | Aucune                                                                                                  |
+| Biais (ce qui peut fausser le résultat)   | Regarde un seul prix : un vin cher est signalé même s'il est normal (19 faux suspects) | Dépend du type de vin ; peu fiable si le groupe est petit | Dépend des colonnes choisies et du réglage (17, 42 ou 66 produits selon 2 %, 5 %, 8 %)                  |
+| Facile à maintenir                        | Très facile : quelques lignes de code                                                  | Facile                                                    | Moyen : il faut la librairie scikit-learn et bien choisir le réglage                                    |
+| Sobriété / impact (développement durable) | Très sobre : un simple calcul                                                          | Très sobre : un calcul par groupe                         | Sobre : quelques secondes sur un ordinateur normal (environ 800 produits), sans serveur ni calcul lourd |
+
+**Usage de l'IA** : j'ai limité l'IA à 5 essais ciblés et je n'ai envoyé aucune donnée, seulement le nom des colonnes.
 
 ## 4. Mes sources
 
-- Documentation officielle d'Isolation Forest (scikit-learn) : https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.IsolationForest.html
-- Guide scikit-learn sur la détection d'outliers : https://scikit-learn.org/stable/modules/outlier_detection.html
-- Article KDnuggets de Nate Rosidi (mars 2026), 5 méthodes testées sur des vins : https://www.kdnuggets.com/we-used-5-outlier-detection-methods-on-a-real-dataset-they-disagreed-on-96-of-flagged-samples
-- Expérience de détection d'outliers (marimo) : https://static.marimo.app/static/outlier-detection-experiment-k3mi
+- Documentation officielle d'Isolation Forest (scikit-learn) : https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.IsolationForest.html (consulté le 17/11/2026)
+- Guide scikit-learn sur la détection d'outliers : https://scikit-learn.org/stable/modules/outlier_detection.html(consulté le 18/11/2026)
+- Article KDnuggets de Nate Rosidi (mars 2026), 5 méthodes testées sur des vins : https://www.kdnuggets.com/we-used-5-outlier-detection-methods-on-a-real-dataset-they-disagreed-on-96-of-flagged-samples (consulté le 18/11/2026)
+- Expérience de détection d'outliers (marimo) : https://static.marimo.app/static/outlier-detection-experiment-k3mi (consulté le 19/11/2026)
 - Mes échanges avec ChatGPT et Claude : voir journal_IA.md
 
 ## 5. Ce que j'ai appris
@@ -70,3 +73,9 @@ Je garde l'option B (IQR par groupe) pour une prochaine amélioration.
 - Le produit le plus cher du catalogue coûte 225 €.
 - Pour comparaison, le z-score donnait une moyenne de 32,23 € et un écart-type de 26,65 €. Sa limite haute (moyenne + 3 écarts-types) était d'environ 112 €.
 - Limite de la méthode : l'IQR regarde seulement le prix. Il signale donc aussi des vins chers qui sont normaux (grands crus avec une marge normale), et il ne dit pas si un produit a une marge négative.
+
+## Automatisation de ma veille
+
+J'ai créé une alerte Google Alerts sur la requête « Isolation Forest outlier detection » (fréquence : une fois par semaine, langue : français, meilleurs résultats). Je reçois les nouveaux articles par email sans avoir à les chercher.
+
+Capture : `docs/captures_veille/alerte_google.png`

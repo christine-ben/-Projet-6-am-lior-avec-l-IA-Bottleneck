@@ -26,3 +26,13 @@ Chaque ligne est un produit. La colonne "raison" explique pourquoi il est signal
 ## Un produit à regarder en priorité
 
 Le vin "Pierre Jean Villa Condrieu Jardin Suspendu 2018" apparaît sous 5 numéros avec les mêmes ventes négatives : c'est peut-être un doublon.
+
+## Accessibilité
+
+Cette fiche est écrite pour être lue par tous, y compris les collaborateurs en situation de handicap :
+
+- phrases courtes et mots simples,
+- titres clairs pour s'y retrouver (et pour un lecteur d'écran),
+- police lisible et contraste fort,
+- aucune information donnée par la couleur seule,
+- chaque capture est accompagnée d'une phrase qui la décrit.
