@@ -65,5 +65,3 @@ sans confondre les erreurs de prix avec les vins haut de gamme.
 - Tester l'IQR par type de vin (option B de ma veille).
 - Ajouter des informations sur les vins (région, appellation) pour une analyse plus précise.
 - Faire relire la liste des produits à vérifier par le caviste, pour calculer une vraie précision.
-
-![Kanban final](docs/captures_kanban/kanban_final_24-11-2026.png)
