@@ -20,8 +20,9 @@ sans confondre les erreurs de prix avec les vins haut de gamme.
 - La marge négative (produit 6324 : vendu 92 €, acheté 99 €) est trouvée par Isolation Forest avec les 3 réglages testés.
 - Les 19 produits signalés seulement par l'IQR sont des grands vins chers à marge normale : ce sont des faux suspects.
 - Isolation Forest repère aussi des problèmes de stock (stock très élevé, aucune vente).
-- Le même vin apparaît sous 2 numéros (4594 et 6324) avec des ventes négatives : doublon possible à vérifier.
 - Au total, 61 produits sont à vérifier. Chacun a une raison écrite dans la colonne "raison".
+- 7 produits sont à corriger en priorité : 4 ont une marge négative et 3 ont des ventes négatives (impossible).
+- Le même vin (Pierre Jean Villa Condrieu Jardin Suspendu 2018) apparaît sous 5 numéros (4055, 4594, 5070, 6324 et 7196) avec les mêmes ventes négatives : doublon possible à vérifier.
 - Aucun produit n'est supprimé : je les signale seulement.
 
 ## Les limites
@@ -48,7 +49,9 @@ sans confondre les erreurs de prix avec les vins haut de gamme.
 - data/ : les fichiers Excel (erp, web, liaison)
 - notebooks/ : le notebook d'origine et le notebook amélioré
 - docs/ : ma veille, mon cahier des charges, mes risques, mon organisation
+- docs/fiche_equipe.md : la fiche d'une page pour expliquer à l'équipe comment lire la liste
 - journal_IA.md : tout ce que j'ai demandé à l'IA et ce que j'ai décidé
+- requirements.txt : la liste des librairies Python à installer
 
 ## Comment j'ai organisé mon travail
 
@@ -62,3 +65,5 @@ sans confondre les erreurs de prix avec les vins haut de gamme.
 - Tester l'IQR par type de vin (option B de ma veille).
 - Ajouter des informations sur les vins (région, appellation) pour une analyse plus précise.
 - Faire relire la liste des produits à vérifier par le caviste, pour calculer une vraie précision.
+
+![Kanban final](docs/captures_kanban/kanban_final_24-11-2026.png)
