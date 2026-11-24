@@ -11,6 +11,8 @@
 | Perte de mon travail                | Mon ordinateur plante ou j'efface un fichier                                             | Faible                   | Grave   | J'enregistre sur GitHub après chaque étape                                                                                                |
 | Pas de vraies erreurs pour vérifier | Je ne peux pas prouver que mes alertes sont justes                                       | Forte                    | Moyenne | Je n'écris pas "précision" ni "exactitude". Je signale des produits à vérifier et j'explique chaque alerte avec la colonne raison         |
 | Trop d'idées de l'IA                | L'IA propose des méthodes ou des métriques trop compliquées que je ne sais pas expliquer | Moyenne                  | Faible  | Je garde seulement ce que je sais expliquer, et je note ce que j'écarte dans journal_IA.md                                                |
+| Données insuffisantes               | Peu de colonnes sur chaque vin (pas de région, pas d'appellation)                        | Forte                    | Moyenne | Je travaille avec les colonnes disponibles et je le dis dans les limites                                                                  |
+| Mauvaise interprétation             | L'équipe prend un produit signalé pour une erreur confirmée                              | Moyenne                  | Moyenne | J'ajoute une colonne raison et une fiche d'une page pour l'équipe : un produit signalé est un produit à vérifier                          |
 
 ## Bilan des risques (24/11/2026)
 
