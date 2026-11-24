@@ -37,6 +37,13 @@ Mise à jour : 23/11/2026
 
 Où j'en suis : 15 terminées, 1 en cours, 0 à faire.
 
+### Définition de « Done » (une tâche est terminée quand…)
+
+- le code marche sans erreur (Run All),
+- le résultat est expliqué dans la case « Ce que je retiens »,
+- le travail est enregistré sur GitHub (git commit + git push),
+- la carte est déplacée dans la colonne « Terminé » du Kanban.
+
 ## 3. Mon planning
 
 Début du projet : 16/11/2026. Date de rendu : 18/12/2026
